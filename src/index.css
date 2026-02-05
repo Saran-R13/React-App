@@ -1,0 +1,17 @@
+body{
+    max-width: 0;
+    border: 0;
+}
+.first-container{
+    display: flex;
+    justify-content: space-between;
+}
+.fstline{
+    text-align: center;
+    /* letter-spacing: 0.5rem; */
+    /* word-spacing: 1rem; */
+}
+.tags{
+    display: flex;
+    gap: 2rem;
+}
