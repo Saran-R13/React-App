@@ -8,7 +8,7 @@ body{
 }
 .fstline{
     text-align: center;
-    /* letter-spacing: 0.5rem; */
+    letter-spacing: 0.5rem;
     /* word-spacing: 1rem; */
 }
 .tags{
