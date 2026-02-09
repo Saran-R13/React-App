@@ -1,16 +1,19 @@
+import { TbRouteScan } from "react-icons/tb";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { Home } from "./Home";
+import "./index.css";
+
 export default function App() {
-  return <Home />;
-}
-function Home() {
+  // return <Home />;
   return (
-    <div className="first-container">
-      <p className="fstline">DreamHomes&Land</p>
-      <ul class="tags">
-        <li> Home</li>
-        <li>Categories</li>
-        <li>About</li>
-        <li>Contact</li>
-      </ul>
-    </div>
+    <BrowserRouter>
+      <nav>
+        <Link to="/home">Login</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/home" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
