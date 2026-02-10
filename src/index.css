@@ -54,4 +54,64 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
      letter-spacing: 0.3rem;
     padding-top: rem;
 }
+.overall-porperty{
+    text-align: center;
+}
+.properties{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+       justify-content: space-evenly;
+       
+  
+   
+    .properties-fst-container,.properties-snd-container,.properties-trd-container{
+        padding: 1rem;
+    background-color: aquamarine;
+     border: 2px black solid;
+     border-radius: 1rem;
+     >h3{
+        letter-spacing: 0.2rem;
+     }
+       height: 20rem;
+    width: 25rem;
+    >button{
+            color:rgb(60, 47, 232);
+            width: 13.9rem;
+            border: 0;
+            border-radius: 1.5rem;
+            height: 2rem;
+            background-color:lightblue;
+    }
+     button:hover{
+            background: rgb(71, 96, 105);
+            color: white;
+        }
+}
+ .properties-fst-container:hover{
+    transform: scale(1.1)translateY(-10px);
+
+ }
+.properties-snd-container:hover{
+    transform: scale(1.1)translateY(-10px);
+   /* padding: 1rem;
+    background-color: aquamarine;
+     border: 2px black solid;
+     border-radius: 1rem;
+     >h3{
+        letter-spacing: 0.2rem;
+     } */
+}
+.properties-trd-container:hover{
+    transform: scale(1.1)translateY(-10px);
+    /* padding: 1rem;
+    background-color: aquamarine;
+     border: 2px black solid;
+     border-radius: 1rem;
+     >h3{
+        letter-spacing: 0.2rem;
+     } */
+}
+}
+
 

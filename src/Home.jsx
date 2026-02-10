@@ -1,4 +1,5 @@
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -10,7 +11,9 @@ export function Home() {
             <a href="#">Home</a>
           </li>
           <li>
-            <a href="#">Properties</a>
+            <Link to="/Properties" a href="#">
+              Properties
+            </Link>
           </li>
           <li>
             <a href="#">About</a>
@@ -34,7 +37,7 @@ export function Home() {
           <button>Click Here...</button>
         </p>
       </section>
-      <footer>
+      <footer className="footer-container">
         <section>
           <h1>Help</h1>
           <p>Questions? Reach out anytime.</p>
