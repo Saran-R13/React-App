@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { Home } from "./Home";
 import "./index.css";
 import { Properties } from "./Properties";
+import { About } from "./About";
 
 export default function App() {
   // return <Home />;
@@ -16,6 +17,7 @@ export default function App() {
       <Routes>
         <Route path="/home" element={<Home />} />
         <Route path="/properties" element={<Properties />} />
+        <Route path="/About" element={<About />} />
       </Routes>
     </BrowserRouter>
   );

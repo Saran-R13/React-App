@@ -16,7 +16,9 @@ export function Home() {
             </Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/About" a href="#">
+              About
+            </Link>
           </li>
           <li>
             <a href="#">Contact</a>

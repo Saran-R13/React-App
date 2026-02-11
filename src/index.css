@@ -31,14 +31,9 @@ a{
     text-align: center;
     font-size: 2rem;
     font-weight: 0.9rem;
-    /* font-family:sans-serif; */
     letter-spacing: 0.3rem;
     padding-top: 4rem;
-    /* .vast-shadow-regular {
-  font-family: "Vast Shadow", serif;
-  font-weight: 400;
-  font-style: normal; */
-/* } */
+   
 }
 .land-container{
     margin: 0;
@@ -58,7 +53,7 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
     text-align: center;
 }
 .properties{
-    padding-top: 1rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: row;
        justify-content: space-evenly;
@@ -94,24 +89,70 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
  }
 .properties-snd-container:hover{
     transform: scale(1.1)translateY(-10px);
-   /* padding: 1rem;
-    background-color: aquamarine;
-     border: 2px black solid;
-     border-radius: 1rem;
-     >h3{
-        letter-spacing: 0.2rem;
-     } */
+  
 }
 .properties-trd-container:hover{
     transform: scale(1.1)translateY(-10px);
-    /* padding: 1rem;
-    background-color: aquamarine;
-     border: 2px black solid;
-     border-radius: 1rem;
-     >h3{
-        letter-spacing: 0.2rem;
-     } */
+    
+}
+} 
+.about-container{
+      margin: 0;
+    border: 0;
+.about-fst-container{
+    padding-left: 1rem;
+    display: flex;
+  background-color: antiquewhite;
+  .box-container{
+    >h2{
+        font-size: 2rem;
+        color: azure;
+    }
+    .span{
+        /* font-style: italic; */
+        font-weight: 600;
+    }
+    background-color:blanchedalmond;
+    color: rgb(42, 46, 50);
+    align-content: center;
+    padding: 0px 7rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+  }
+  .about-fst-container img{
+    border-radius: 5rem;
+  }
+}
+.about-snd-container{
+  
+    background-color: blanchedalmond;
+    text-align: center;
+    padding-top: 2rem;
+    >h1{
+       color: rgb(6, 58, 104); 
+    }
+    .sec-box-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        align-items: center;
+         padding: 40px;
+    }
+    .sec-box2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 10px;
+}
+.sec-box1 p{
+    align-content: center;
+      font-size: 1.2rem;line-height: 1.8rem;
+      font-family: sans-serif;
+
 }
 }
+}
+
+
 
 
