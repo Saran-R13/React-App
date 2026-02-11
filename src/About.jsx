@@ -53,7 +53,73 @@ export function About() {
               />
             </section>
           </section>
-          <section></section>
+        </section>
+        <section className="about-trd-container">
+          <section className="trd-box-container">
+            <div className="trd-box">
+              <h1> Mission---Rayora</h1>
+              <div className="trd-box1">
+                <img
+                  src="https://www.shutterstock.com/image-photo/innovative-architecture-inventive-civil-engineering-600nw-2144337233.jpg"
+                  alt=""
+                />
+                <p>
+                  To deliver exceptional real estate solutions by providing
+                  transparent, technology-driven, and customer-centric land and
+                  property services. We are committed to ensuring secure
+                  transactions, verified property listings, and long-term value
+                  creation for our clients and partners.
+                </p>
+              </div>
+            </div>
+            <div className="trd-box">
+              <h1>Vision---Rayora</h1>
+              <div className="trd-box2">
+                <p>
+                  To deliver exceptional real estate solutions by providing
+                  transparent, technology-driven, and customer-centric land and
+                  property services. We are committed to ensuring secure
+                  transactions, verified property listings, and long-term value
+                  creation for our clients and partners.
+                </p>
+                <img
+                  src="https://static.vecteezy.com/system/resources/thumbnails/049/685/801/small/construction-workers-celebrate-on-top-of-a-skyscraper-at-night-photo.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </section>
+          <section className="about-frth-container">
+            <div className="h1tag">
+              <h1>Our Core Value</h1>
+            </div>
+            <div className="frth-box">
+              <p> 🤝Integrity</p>
+              <p> 🔍Transparency</p>
+              <p> 🏘️Customer Commitment</p>
+              <p> 🚀Innovation</p>
+              <p> 📈Excellence</p>
+            </div>
+          </section>
+          <section className="about-fifth-container">
+            <div className="fifth-h1">
+              <h1>Why Choose Rayora</h1>
+            </div>
+            <div className="fifth-box1">
+              <p>✔️ Verified property listings </p>
+              <p>✔️ Clear documentation</p>
+              <p>✔️ Professional support</p>
+              <p>✔️ Prime locations</p>
+              <p>✔️ Secure transactions</p>
+            </div>
+            <div className="fifth-box2">
+              <p>
+                At Rayora, we are committed to delivering reliable property
+                solutions with honesty and professionalism, ensuring long-term
+                value for our clients.
+              </p>
+            </div>
+          </section>
         </section>
       </section>
     </>

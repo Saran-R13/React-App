@@ -1,6 +1,7 @@
 body{
     margin: 0;
     border: 0;
+
 }
 .first-container{
     align-items: center;
@@ -99,6 +100,7 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
 .about-container{
       margin: 0;
     border: 0;
+    width: 100%;
 .about-fst-container{
     padding-left: 1rem;
     display: flex;
@@ -120,7 +122,10 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
     font-family: sans-serif;
   }
   .about-fst-container img{
-    border-radius: 5rem;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 .about-snd-container{
@@ -148,11 +153,92 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
     align-content: center;
       font-size: 1.2rem;line-height: 1.8rem;
       font-family: sans-serif;
-
 }
 }
+.about-trd-container{
+    margin: 0;
+    border: 0;
+    padding-top: 2rem;
+    background-color: antiquewhite;
+    .trd-box-container{
+        .trd-box{
+            text-align: center  ;
+        }
+        .trd-box1{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        align-items: center;
+         padding: 40px;
+        }
+        .trd-box1 img{
+             width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 10px;
+        }
+        .trd-box1 p{
+            padding: 3rem;
+            text-align: center;
+            line-height: 2rem;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+          .trd-box1:hover{
+            transform: scale(1.1)translateY(-5px);
+        }
+        .trd-box2{
+              display: grid;
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px;
+        align-items: center;
+         padding: 40px;
+        }
+        .trd-box2:hover{
+            transform: scale(1.1)translateY(-5px);
+        }
+        .trd-box2 img{
+            
+              width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: 10px;
+        }
+
+        .trd-box2 p{
+            padding: 3rem;
+            text-align: center;
+            line-height: 2rem;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+    }
 }
-
-
-
-
+}
+.about-frth-container{
+    .h1tag{
+        text-align: center;
+    }
+    .frth-box{
+        background: url("https://www.shutterstock.com/image-photo/sunlit-outdoor-meeting-construction-workers-260nw-2694924847.jpg");
+        background-size: cover;
+        font-size: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.about-fifth-container{
+    .fifth-h1{
+        text-align: center;
+    }
+    .fifth-box1{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    .fifth-box2{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
