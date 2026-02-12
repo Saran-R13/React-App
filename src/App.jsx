@@ -11,7 +11,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <nav>
-        {/* <Link to="/home">Login</Link> */}
+        <Link to="/home">Login</Link>
         {/* <Link to="/properties">Properties</Link> */}
       </nav>
 

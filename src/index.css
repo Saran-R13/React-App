@@ -50,6 +50,36 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
      letter-spacing: 0.3rem;
     padding-top: rem;
 }
+.footer-container{
+    display: flex;justify-content: space-evenly;
+
+.foot-box1,.foot-box2,.foot-box3,.foot-box4{
+    /* color: white; */
+    /* background-color: black; */
+    width: 20rem;
+    /* display: flex; */
+}
+.foot-box1 img{
+width: 100px;
+height: 100px;
+padding-bottom: -2rem;
+margin: 0;
+}
+.foot-box1 p{
+    padding-top: 0rem;
+    line-height: 1.2rem;
+    font-family: sans-serif;
+    margin: 0;
+}
+ .span{
+    font-weight: 700;
+    font-family: serif;
+ }
+
+.foot-box2 h3{
+    padding-left: 1.6rem; 
+}
+}
 .overall-porperty{
     text-align: center;
 }
@@ -242,3 +272,40 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
         font-size: 1.2rem;
     }
 }
+.contact-container {
+  width: 100%;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 25px;
+  background-color: #1e3a8a;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0f172a;
+}
+
