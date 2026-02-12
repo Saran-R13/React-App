@@ -1,7 +1,10 @@
 import { FaCity, FaHouseUser, FaMountain } from "react-icons/fa";
+import Header from "./Header";
+import { Footer } from "./Footer";
 export function Properties() {
   return (
     <>
+      <Header />
       <section className="overall-porperty">
         <h2>Research and Insights</h2>
         <p>Explore useful real estate insights</p>
@@ -59,6 +62,7 @@ export function Properties() {
           <button>Click Mee</button>
         </section>
       </section>
+      <Footer />
     </>
   );
 }

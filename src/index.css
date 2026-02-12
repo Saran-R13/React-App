@@ -4,7 +4,17 @@ body{
 
 }
 .first-container{
+    padding-left: 2rem;
     align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+.first-container-box1 img{
+    width: 200px;
+    height: 200px;
+}
+.first-container-box1{
+  align-items: center;
     display: flex;
     justify-content: space-around;
 }
@@ -214,9 +224,9 @@ margin: 0;
             font-size: 1.5rem;
             font-family: sans-serif;
         }
-          .trd-box1:hover{
+          /* .trd-box1:hover{
             transform: scale(1.1)translateY(-5px);
-        }
+        } */
         .trd-box2{
               display: grid;
         grid-template-columns: 1fr 1fr; 
@@ -224,9 +234,9 @@ margin: 0;
         align-items: center;
          padding: 40px;
         }
-        .trd-box2:hover{
+        /* .trd-box2:hover{
             transform: scale(1.1)translateY(-5px);
-        }
+        } */
         .trd-box2 img{
             
               width: 100%;

@@ -1,6 +1,11 @@
+import React from "react";
+import Header from "./Header";
+import {Footer} from "./Footer";
+
 export function About() {
   return (
     <>
+      <Header />
       <section className="about-container">
         <section className="about-fst-container">
           <img
@@ -122,6 +127,7 @@ export function About() {
           </section>
         </section>
       </section>
+      <Footer />
     </>
   );
 }

@@ -1,11 +1,17 @@
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Header from "./Header";
+import { Footer } from "./Footer";
 
 export function Home() {
   return (
     <>
-      <header className="first-container">
-        <h1 className="fstline">Rayora Land Developers</h1>
+      <Header />
+      {/* <section className="first-container">
+        <section className="first-container-box1">
+          <img src="./src/photos/companylogo.png" alt="" />
+          <h1 className="fstline">Rayora Land Developers</h1>
+        </section>
         <ul class="tags">
           <li>
             <a href="#">Home</a>
@@ -26,7 +32,7 @@ export function Home() {
             </Link>
           </li>
         </ul>
-      </header>
+      </section> */}
       <section>
         <p className="flat-container">
           Live Where Your Heart Belongs Modern Homes & Premium Flats
@@ -41,13 +47,13 @@ export function Home() {
           <button>Click Here...</button>
         </p>
       </section>
-      <footer className="footer-container">
+      {/* <footer className="footer-container">
         <section className="foot-box1">
           <img src="./src/photos/companylogo.png" alt="" />
           <p>
-            <span className="span">Rayora </span>is a trusted real estate platform specializing in verified
-            land and residential plots. We ensure transparent, secure, and
-            smooth property transactions.
+            <span className="span">Rayora </span>is a trusted real estate
+            platform specializing in verified land and residential plots. We
+            ensure transparent, secure, and smooth property transactions.
           </p>
         </section>
         <section className="foot-box2">
@@ -75,7 +81,8 @@ export function Home() {
           <h4>📞 +91 73585 29050</h4>
           <h4>📧 saran@gmail.com</h4>
         </section>
-      </footer>
+      </footer> */}
+      <Footer />
     </>
   );
 }
