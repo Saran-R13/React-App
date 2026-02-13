@@ -4,30 +4,41 @@ body{
 
 }
 .first-container{
+    
     padding-left: 2rem;
     align-items: center;
     display: flex;
     justify-content: space-around;
 }
 .first-container-box1 img{
+    padding-left: 5rem;
     width: 200px;
     height: 200px;
 }
 .first-container-box1{
+    background-color: blanchedalmond;
   align-items: center;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .fstline{
+    padding-left: 2rem;
     text-align: center;
     letter-spacing: 0.5rem;
     
 }
+
 .tags {
+    padding-left: 9rem;
+    font-size: 1.5rem;
     display: flex;
+    justify-content: space-evenly;
     gap: 2rem;
-    text-decoration: none;
-    list-style: none;
+    nav{
+        display: flex;
+        gap: 2rem;
+    }
+    
 }
 a{
      text-decoration: none;
@@ -61,6 +72,7 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
     padding-top: rem;
 }
 .footer-container{
+    background-color: bisque;
     display: flex;justify-content: space-evenly;
 
 .foot-box1,.foot-box2,.foot-box3,.foot-box4{
@@ -104,7 +116,8 @@ margin: 0;
     .properties-fst-container,.properties-snd-container,.properties-trd-container{
         padding: 1rem;
     background-color: aquamarine;
-     border: 2px black solid;
+    box-shadow: 5px 5px 5px  rgb(186, 226, 186);
+     /* border: 2px black solid; */
      border-radius: 1rem;
      >h3{
         letter-spacing: 0.2rem;

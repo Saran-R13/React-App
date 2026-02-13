@@ -1,6 +1,6 @@
 import { Footer } from "./Footer";
 import Header from "./Header";
-// import Footer from "./Footer";
+// import { Footer } from "./Footer";
 
 export function Contact() {
   return (
