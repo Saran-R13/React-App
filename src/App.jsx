@@ -9,6 +9,7 @@ import { About } from "./About";
 import { Contact } from "./Contact";
 import { CityAreas } from "./CityAreas";
 import { Villages } from "./Villages";
+import { HillStations } from "./HillStations";
 
 export default function App() {
   return (
@@ -39,7 +40,8 @@ export default function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Contact" element={<Contact />} />
         <Route path="/CityAreas" element={<CityAreas />} />
-        <Route path="/Villa/>
+        <Route path="/Villages" element={<Villages />} />
+        <Route path="/HillStations" element={<HillStations />} />
       </Routes>
     </>
   );

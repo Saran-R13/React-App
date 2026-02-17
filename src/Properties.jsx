@@ -4,9 +4,13 @@ import { Footer } from "./Footer";
 // import { CityAreas } from "./App";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+// import { HillStations } from "./HillStations";
+// import { Villages } from "./Villages";
 
 export function Properties() {
   const [showCity, setShowCity] = useState(false);
+  const [showVillages, setshowVillages] = useState(false);
+  const [showHillStations, setshowHillStatios] = useState(false);
   return (
     <>
       <Header />
@@ -28,8 +32,9 @@ export function Properties() {
             <li>Strong resale value</li>
           </ul>
           <Link to="/CityAreas">
-           <button onClick={() => setShowCity(!showCity)}>Click Mee</button>
-          {showCity && <CityAreas />}</Link>
+            <button onClick={() => setShowCity(!showCity)}>Click Mee</button>
+            {showCity && <CityAreas />}
+          </Link>
         </section>
         <section className="properties-snd-container">
           <FaHouseUser />
@@ -43,9 +48,12 @@ export function Properties() {
             <li>Community-based lifestyle</li>
             <li>Investment opportunity for future development</li>
           </ul>
-           <Link to="/CityAreas">
-           <button onClick={() => setShowCity(!showCity)}>Click Mee</button>
-          {showCity && <CityAreas />}</Link>
+          <Link to="/Villages">
+            <button onClick={() => setshowVillages(!showVillages)}>
+              Click Mee
+            </button>
+            {showVillages && <Villages />}
+          </Link>
         </section>
         <section className="properties-trd-container">
           <FaMountain />
@@ -59,9 +67,12 @@ export function Properties() {
             <li>Luxury cottages & eco-friendly homes</li>
             <li>Great for retirement living</li>
           </ul>
-           <Link to="/CityAreas">
-           <button onClick={() => setShowCity(!showCity)}>Click Mee</button>
-          {showCity && <CityAreas />}</Link>
+          <Link to="/HillStations">
+            <button onClick={() => setshowHillStatios(!showHillStations)}>
+              Click Mee
+            </button>
+            {showCity && <HillStations />}
+          </Link>
         </section>
       </section>
       <Footer />
