@@ -150,6 +150,11 @@ margin: 0;
     
 }
 } 
+.city-properties{
+    .city-fst-container{
+        text-align: center;
+    }
+}
 .about-container{
       margin: 0;
     border: 0;
