@@ -234,10 +234,13 @@ margin: 0;
     }
 }
 
-.villupuram-propertie-table,.kallakurichi-propertie-table{
+.villupuram-propertie-table,.kallakurichi-propertie-table,.tiruvannamalai-propertie-table,
+.salem-propertie-table,.ariyalur-propertie-table{
      padding: 40px;
 }
-.villupuram-propertie-table .villupuram-table,.kallakurichi-propertie-table .kallakurichi-table{
+.villupuram-propertie-table .villupuram-table,.kallakurichi-propertie-table .kallakurichi-table,
+.tiruvannamalai-propertie-table .tiruvannamalai-table,.salem-propertie-table .salem-table,
+.ariyalur-propertie-table .ariyalur-table{
      width: 100%;
   border-collapse: collapse; 
 }
@@ -269,10 +272,116 @@ padding: 15px;
   border: none;
   cursor: pointer; 
 }
+.tiruvannamalai-propertie-table th,.tiruvannamalai-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.tiruvannamalai-propertie-table th{
+background-color: #f2f2f2;
+}
+.tiruvannamalai-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.salem-propertie-table th,.salem-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.salem-propertie-table th{
+background-color: #f2f2f2;
+}
+.salem-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.ariyalur-propertie-table th,.ariyalur-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.ariyalur-propertie-table th{
+background-color: #f2f2f2;
+}
+.ariyalur-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
 .hillStation-properties{
     .hillstation-fst-container{
          text-align: center;
     }
+}
+.ooty-propertie-table,.kodaikanal-propertie-table,.yercaud-propertie-table,.coonoor-propertie-table{
+ padding: 40px;
+}
+.ooty-propertie-table .ooty-table,.kodaikanal-propertie-table .kodaikanal-table,
+.yercaud-propertie-table .yercaud-table,.coonoor-propertie-table .coonoor-table{
+ width: 100%;
+  border-collapse: collapse; 
+}
+.ooty-propertie-table th,.ooty-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.ooty-propertie-table th{
+background-color: #f2f2f2;
+}
+.ooty-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.kodaikanal-propertie-table th,.kodaikanal-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.kodaikanal-propertie-table th{
+background-color: #f2f2f2;
+}
+.kodaikanal-propertie-table button{
+padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.yercaud-propertie-table th,.yercaud-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.yercaud-propertie-table th{
+background-color: #f2f2f2;
+}
+.yercaud-propertie-table button{
+padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.coonoor-propertie-table th,.coonoor-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.coonoor-propertie-table th{
+background-color: #f2f2f2;
+}
+.coonoor-propertie-table button{
+   padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;  
 }
 .about-container{
       margin: 0;

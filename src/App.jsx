@@ -18,6 +18,11 @@ import { VillupuramPage } from "./Villupuram";
 import { KallakurichiPage } from "./Kallakurichi";
 import { Tiruvannamalai } from "./Tiruvannamalai";
 import { Salem } from "./Salem";
+import { Ariyalur } from "./Ariyalur";
+import { Ooty } from "./Ooty";
+import { Kodaikanal } from "./Kodaikanal";
+import { Yercaud } from "./Yercaud";
+import { Coonoor } from "./Coonoor";
 
 export default function App() {
   return (
@@ -57,7 +62,12 @@ export default function App() {
         <Route path="/kallakurichipage" element={<KallakurichiPage />} />
         <Route path="/tiruvannamalai" element={<Tiruvannamalai />} />
         <Route path="/salem" element={<Salem />} />
+        <Route path="/ariyalur" element={<Ariyalur />} />
         <Route path="/hillStations" element={<HillStations />} />
+        <Route path="/ooty" element={<Ooty />} />
+        <Route path="/kodaikanal" element={<Kodaikanal />} />
+        <Route path="/yercaud" element={<Yercaud />} />
+        <Route path="/coonoor" element={<Coonoor />} />
       </Routes>
     </>
   );

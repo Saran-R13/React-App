@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export function HillStations() {
+  const navigate = useNavigate();
   return (
     <section className="hillStation-properties">
       <div className="hillstation-fst-container">
@@ -11,10 +14,10 @@ export function HillStations() {
         </p>
       </div>
       <div className="hillstation-snd-container">
-        <button>Ooty (Udhagamandalam)</button>
-        <button>Kodaikanal</button>
-        <button>Yercaud</button>
-        <button>Coonoor</button>
+        <button onClick={() => navigate("/ooty")}>Ooty (Udhagamandalam)</button>
+        <button onClick={() => navigate("/kodaikanal")}>Kodaikanal</button>
+        <button onClick={() => navigate("/yercaud")}>Yercaud</button>
+        <button onClick={() => navigate("/coonoor")}>Coonoor</button>
 
         {/* <ul>
         <li>
@@ -31,6 +34,7 @@ export function HillStations() {
         </li>
       </ul> */}
       </div>
+      <button onClick={() => navigate(-1)}>Back</button>
     </section>
   );
 }

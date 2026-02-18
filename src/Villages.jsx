@@ -21,7 +21,7 @@ export function Villages() {
           Tiruvannamalai
         </button>
         <button onClick={() => navigate("/salem")}>Salam</button>
-        <button>Ariyalur</button>
+        <button onClick={() => navigate("/ariyalur")}>Ariyalur</button>
       </div>
       {/* <ul>
         <li>
@@ -40,6 +40,7 @@ export function Villages() {
           <a href="#">Ariyalur </a>
         </li>
       </ul> */}
+      <button onClick={() => navigate(-1)}>Back</button>
     </section>
   );
 }

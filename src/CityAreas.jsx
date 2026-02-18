@@ -70,6 +70,7 @@ export function CityAreas() {
           </li>
         </ul> */}
       </div>
+      <button onClick={() => navigate(-1)}>Back</button>
     </section>
   );
 }
