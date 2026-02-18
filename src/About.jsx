@@ -1,8 +1,10 @@
 import React from "react";
 import Header from "./Header";
-import {Footer} from "./Footer";
+import { Footer } from "./Footer";
+import { Navigate, useNavigate } from "react-router-dom";
 
 export function About() {
+  const navigate = useNavigate();
   return (
     <>
       <Header />
@@ -127,6 +129,7 @@ export function About() {
           </section>
         </section>
       </section>
+      <button onClick={() => navigate(-1)}>Back</button>
       <Footer />
     </>
   );

@@ -155,6 +155,125 @@ margin: 0;
         text-align: center;
     }
 }
+.chennai-propertie-table,.coimbatore-propertie-table,.madurai-propertie-table,.trichy-propertie-table {
+  padding: 40px;
+}
+
+.chennai-propertie-table .chennai-table ,.coimbatore-propertie-table .coimbatore-table,
+.madurai-propertie-table .madurai-table ,.trichy-propertie-table .trichy-table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.chennai-propertie-table th,
+.chennai-propertie-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.chennai-propertie-table th {
+  background-color: #f2f2f2;
+}
+
+.chennai-propertie-table button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.coimbatore-propertie-table th,
+.coimbatore-propertie-table td{
+     padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.coimbatore-propertie-table th{
+     background-color: #f2f2f2; 
+}
+.coimbatore-propertie-table button{
+     padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.madurai-propertie-table th,
+.madurai-propertie-table td{
+ padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.madurai-propertie-table th{
+  background-color: #f2f2f2; 
+}
+.madurai-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.trichy-propertie-table th,
+.trichy-propertie-table td{
+ padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.trichy-propertie-table th{
+ background-color: #f2f2f2; 
+}
+.trichy-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+
+.village-properties{
+    .village-fst-container{
+        text-align: center;
+    }
+}
+
+.villupuram-propertie-table,.kallakurichi-propertie-table{
+     padding: 40px;
+}
+.villupuram-propertie-table .villupuram-table,.kallakurichi-propertie-table .kallakurichi-table{
+     width: 100%;
+  border-collapse: collapse; 
+}
+.villupuram-propertie-table th,.villupuram-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.villupuram-propertie-table th{
+ background-color: #f2f2f2;
+}
+.villupuram-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.kallakurichi-propertie-table th,.kallakurichi-propertie-table td{
+padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+.kallakurichi-propertie-table th{
+ background-color: #f2f2f2;
+}
+.kallakurichi-propertie-table button{
+ padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer; 
+}
+.hillStation-properties{
+    .hillstation-fst-container{
+         text-align: center;
+    }
+}
 .about-container{
       margin: 0;
     border: 0;
@@ -179,6 +298,7 @@ margin: 0;
     font-size: 1.2rem;
     font-family: sans-serif;
   }
+  
   .about-fst-container img{
     border-radius: 10px;
     width: 100%;

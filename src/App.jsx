@@ -10,6 +10,14 @@ import { Contact } from "./Contact";
 import { CityAreas } from "./CityAreas";
 import { Villages } from "./Villages";
 import { HillStations } from "./HillStations";
+import { ChennaiPage } from "./Chennai";
+import { CoimbatorePage } from "./Coimbatore";
+import { MaduraiPage } from "./Madurai";
+import { TrichyPage } from "./Trichy";
+import { VillupuramPage } from "./Villupuram";
+import { KallakurichiPage } from "./Kallakurichi";
+import { Tiruvannamalai } from "./Tiruvannamalai";
+import { Salem } from "./Salem";
 
 export default function App() {
   return (
@@ -21,27 +29,35 @@ export default function App() {
 
           <div className="tags">
             <nav>
-              <Link to="/Header"></Link>
-              <Link to="/Footer"></Link>
-              <Link to="/Home">Home</Link>
-              <Link to="/Properties">Properties</Link>
-              <Link to="/About">About</Link>
-              <Link to="/Contact">Contact</Link>
+              {/* <Link to="/header"></Link> */}
+              {/* <Link to="/footer"></Link> */}
+              <Link to="/">Home</Link>
+              <Link to="/properties">Properties</Link>
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
             </nav>
           </div>
         </section>
       </div>
 
       <Routes>
-        <Route path="/Header" element={<Header />} />
+        <Route path="/header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/properties" element={<Properties />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Contact" element={<Contact />} />
-        <Route path="/CityAreas" element={<CityAreas />} />
-        <Route path="/Villages" element={<Villages />} />
-        <Route path="/HillStations" element={<HillStations />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/cityAreas" element={<CityAreas />} />
+        <Route path="/chennaiPage" element={<ChennaiPage />} />
+        <Route path="/coimbatorePage" element={<CoimbatorePage />} />
+        <Route path="/maduraiPage" element={<MaduraiPage />} />
+        <Route path="trichyPage" element={<TrichyPage />} />
+        <Route path="/villages" element={<Villages />} />
+        <Route path="/villupurampage" element={<VillupuramPage />} />
+        <Route path="/kallakurichipage" element={<KallakurichiPage />} />
+        <Route path="/tiruvannamalai" element={<Tiruvannamalai />} />
+        <Route path="/salem" element={<Salem />} />
+        <Route path="/hillStations" element={<HillStations />} />
       </Routes>
     </>
   );

@@ -15,8 +15,12 @@
 //       </ul>
 //     </section>
 //   );
+
+import { useNavigate } from "react-router-dom";
+
 // }
 export function CityAreas() {
+  const navigate = useNavigate();
   return (
     <section className="city-properties">
       <div className="city-fst-container">
@@ -28,11 +32,11 @@ export function CityAreas() {
         </p>
       </div>
       <div className="city-snd-container">
-          <button>Chennai</button>
-            <button>Coimbatore</button>
-              <button>Madurai</button>
-                <button>Tiruchirappalli</button>
-                
+        <button onClick={() => navigate("/chennaiPage")}>Chennai</button>
+        <button onClick={() => navigate("/coimbatorePage")}>Coimbatore</button>
+        <button onClick={() => navigate("/maduraiPage")}>Madurai</button>
+        <button onClick={() => navigate("/trichyPage")}>Trichy</button>
+
         {/* <ul>
           <li>
             <a href="#">Chennai</a>

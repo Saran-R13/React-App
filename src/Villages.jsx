@@ -1,13 +1,29 @@
-export function Villages() {
-  return (
-    <section  className="village-section">
-      <h2 className="section-title">Emerging Rural Investment Destinations</h2>
+import { useNavigate } from "react-router-dom";
 
-      <p className="section-subtitle">
-        Discover high-potential land opportunities in rapidly developing
-        rural regions, offering long-term growth and secure property investments.
-      </p>
-      <ul>
+export function Villages() {
+  const navigate = useNavigate();
+  return (
+    <section className="village-properties">
+      <div className="village-fst-container">
+        <h2>Emerging Rural Investment Destinations</h2>
+
+        <p>
+          Discover high-potential land opportunities in rapidly developing rural
+          regions, offering long-term growth and secure property investments.
+        </p>
+      </div>
+      <div className="village-snd-container">
+        <button onClick={() => navigate("/villupurampage")}>Villupuram</button>
+        <button onClick={() => navigate("/kallakurichipage")}>
+          Kallakurichi
+        </button>
+        <button onClick={() => navigate("/tiruvannamalai")}>
+          Tiruvannamalai
+        </button>
+        <button onClick={() => navigate("/salem")}>Salam</button>
+        <button>Ariyalur</button>
+      </div>
+      {/* <ul>
         <li>
           <a href="#">Villupuram</a>
         </li>
@@ -23,7 +39,7 @@ export function Villages() {
         <li>
           <a href="#">Ariyalur </a>
         </li>
-      </ul>
+      </ul> */}
     </section>
   );
 }
