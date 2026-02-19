@@ -20,7 +20,9 @@ export function ChennaiPage() {
             <td>₹18,500</td>
             <td>₹14,000 - ₹25,000</td>
             <td>
-              <button>See 82 Properties</button>
+              <button onClick={() => navigate("/cityplots/rs-puram")}>
+                See 10 Properties
+              </button>
             </td>
           </tr>
 

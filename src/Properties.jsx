@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 // import { Villages } from "./Villages";
 
 export function Properties() {
-  const [showCity, setShowCity] = useState(false);
+  // const [showCity, setShowCity] = useState(false);
   const [showVillages, setshowVillages] = useState(false);
   const [showHillStations, setshowHillStatios] = useState(false);
   return (
@@ -32,8 +32,8 @@ export function Properties() {
             <li>Strong resale value</li>
           </ul>
           <Link to="/CityAreas">
-            <button onClick={() => setShowCity(!showCity)}>Click Mee</button>
-            {showCity && <CityAreas />}
+            <button>Click Mee</button>
+            {/* {showCity && <CityAreas />} */}
           </Link>
         </section>
         <section className="properties-snd-container">
@@ -71,7 +71,7 @@ export function Properties() {
             <button onClick={() => setshowHillStatios(!showHillStations)}>
               Click Mee
             </button>
-            {showCity && <HillStations />}
+            {showHillStations && <HillStations />}
           </Link>
         </section>
       </section>

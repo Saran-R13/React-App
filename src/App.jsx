@@ -23,6 +23,7 @@ import { Ooty } from "./Ooty";
 import { Kodaikanal } from "./Kodaikanal";
 import { Yercaud } from "./Yercaud";
 import { Coonoor } from "./Coonoor";
+import { CityPlots } from "./CityPlots";
 
 export default function App() {
   return (
@@ -54,6 +55,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cityAreas" element={<CityAreas />} />
         <Route path="/chennaiPage" element={<ChennaiPage />} />
+        <Route path="/cityplots/:area" element={<CityPlots />} />
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />
         <Route path="/maduraiPage" element={<MaduraiPage />} />
         <Route path="trichyPage" element={<TrichyPage />} />
