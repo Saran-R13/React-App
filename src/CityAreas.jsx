@@ -31,11 +31,174 @@
 // }
 //-------------------------------------------------------------------------------------------------------------
 
+// import { ChennaiPage } from "./Chennai";
+// import { useNavigate } from "react-router-dom";
+// import {
+//   FormControl,
+//   InputLabel,
+//   Select,
+//   MenuItem,
+//   Box,
+//   Typography,
+//   Paper,
+// } from "@mui/material";
+// import { useState } from "react";
 
+// export function CityAreas() {
+//   const navigate = useNavigate();
 
+//   const [location, setLocation] = useState("");
+//   const [area, setArea] = useState("");
 
+//   const properties = {
+//     Chennai: [
+//       { locality: "RA Puram", avgPrice: 18500 },
+//       { locality: "Nungambakkam", avgPrice: 16800 },
+//       { locality: "Adyar", avgPrice: 17200 },
+//       { locality: "Sholinganallur", avgPrice: 12000 },
+//       { locality: "Thoraipakkam", avgPrice: 13500 },
+//       { locality: "Porur", avgPrice: 9000 },
+//       { locality: "Tambaram", avgPrice: 7000 },
+//       { locality: "OMR", avgPrice: 7900 },
+//     ],
+//     Coimbatore: [
+//       { locality: "RS Puram", avgPrice: 5800 },
+//       { locality: "Saibaba Colony", avgPrice: 5200 },
+//       { locality: "Gandhipuram", avgPrice: 6000 },
+//       { locality: "Saravanampatti", avgPrice: 4200 },
+//       { locality: "Peelamedu", avgPrice: 4900 },
+//       { locality: "Kalapatti", avgPrice: 3800 },
+//       { locality: "Kuniamuthur", avgPrice: 3400 },
+//       { locality: "Eachanari", avgPrice: 3100 },
+//       { locality: "Perur", avgPrice: 3600 },
+//       { locality: "Palladam Road", avgPrice: 3900 },
+//     ],
+//     Madurai: [
+//       { locality: "KK Nagar", avgPrice: 3400 },
+//       { locality: "Madurai East", avgPrice: 3100 },
+//       { locality: "Simmakkal", avgPrice: 3600 },
+//       { locality: "Alagar Kovil Road", avgPrice: 3000 },
+//       { locality: "Thiru Nagar", avgPrice: 2800 },
+//       { locality: "Goripalayam", avgPrice: 3200 },
+//       { locality: "Vilangudi", avgPrice: 2900 },
+//       { locality: "Thirunagar", avgPrice: 3300 },
+//       { locality: "Sathamangalam", avgPrice: 2700 },
+//       { locality: "Singampunari Road", avgPrice: 2500 },
+//     ],
+//     Trichy: [
+//       { locality: "Thillai Nagar", avgPrice: 3800 },
+//       { locality: "Srirangam", avgPrice: 4200 },
+//       { locality: "Navalur", avgPrice: 3400 },
+//       { locality: "Bharathidasan Road", avgPrice: 3200 },
+//       { locality: "Golden Rock", avgPrice: 3000 },
+//       { locality: "Doctors Colony", avgPrice: 4500 },
+//       { locality: "K.K. Nagar (Trichy)", avgPrice: 3600 },
+//       { locality: "Peelamedu Road", avgPrice: 2900 },
+//       { locality: "Vidiyal Nagar", avgPrice: 3500 },
+//       { locality: "Trichy West Zone", avgPrice: 2700 },
+//     ],
+//   };
 
-import { ChennaiPage } from "./Chennai";
+//   const currentProperties = properties[location] || [];
+
+//   const filteredProperties = currentProperties.filter((item) => {
+//     if (area === "small") return item.avgPrice < 10000;
+//     if (area === "medium")
+//       return item.avgPrice >= 10000 && item.avgPrice <= 15000;
+//     if (area === "large") return item.avgPrice > 15000;
+//     return true;
+//   });
+
+//   return (
+//     <Box sx={{ padding: 4 }}>
+//       <section className="city-properties">
+//         <div className="city-fst-container">
+//           <Typography variant="h4" gutterBottom>
+//             Strategic Locations Across Tamil Nadu
+//           </Typography>
+
+//           <p>
+//             Unlock premium land assets in rapidly developing urban hubs with
+//             long-term value and growth potential.
+//           </p>
+//         </div>
+
+//         {/* 🔽 Select Filters */}
+//         <Box
+//           sx={{
+//             display: "flex",
+//             gap: 3,
+//             mb: 3,
+//             flexWrap: "wrap",
+//           }}
+//         >
+//           {/* Location */}
+//           <FormControl sx={{ minWidth: 200 }}>
+//             <InputLabel>Location</InputLabel>
+//             <Select
+//               value={location}
+//               label="Location"
+//               onChange={(e) => {
+//                 setLocation(e.target.value);
+//                 setArea("");
+//               }}
+//             >
+//               <MenuItem value="Chennai">Chennai</MenuItem>
+//               <MenuItem value="Coimbatore">Coimbatore</MenuItem>
+//               <MenuItem value="Madurai">Madurai</MenuItem>
+//               <MenuItem value="Trichy">Trichy</MenuItem>
+//             </Select>
+//           </FormControl>
+
+//           {/* Price */}
+//           <FormControl sx={{ minWidth: 200 }} disabled={!location}>
+//             <InputLabel>Price Range</InputLabel>
+//             <Select
+//               value={area}
+//               label="Price Range"
+//               onChange={(e) => setArea(e.target.value)}
+//             >
+//               <MenuItem value="small">Below ₹10,000</MenuItem>
+//               <MenuItem value="medium">₹10,000 - ₹15,000</MenuItem>
+//               <MenuItem value="large">Above ₹15,000</MenuItem>
+//             </Select>
+//           </FormControl>
+//         </Box>
+
+//         {/* Table */}
+//         {location && (
+//           <Paper elevation={3} sx={{ padding: 3 }}>
+//             <Typography variant="h6" gutterBottom>
+//               Property Rates in {location}
+//             </Typography>
+
+//             <table width="100%" cellPadding="10">
+//               <thead>
+//                 <tr style={{ background: "#f5f5f5" }}>
+//                   <th align="left">Locality</th>
+//                   <th align="left">Avg Price (₹/sq.ft)</th>
+//                 </tr>
+//               </thead>
+
+//               <tbody>
+//                 {filteredProperties.map((item, index) => (
+//                   <tr key={index}>
+//                     <td>{item.locality}</td>
+//                     <td>₹{item.avgPrice}</td>
+//                   </tr>
+//                 ))}
+//               </tbody>
+//             </table>
+//           </Paper>
+//         )}
+
+//         <button onClick={() => navigate(-1)}>Back</button>
+//       </section>
+//     </Box>
+//   );
+// }
+//--------------------------------------------------------------------------------------------------
+
 import { useNavigate } from "react-router-dom";
 import {
   FormControl,
@@ -54,135 +217,158 @@ export function CityAreas() {
   const [location, setLocation] = useState("");
   const [area, setArea] = useState("");
 
+  /* ---------------- PROPERTY DATA ---------------- */
+
   const properties = {
     Chennai: [
       { locality: "RA Puram", avgPrice: 18500 },
       { locality: "Nungambakkam", avgPrice: 16800 },
       { locality: "Adyar", avgPrice: 17200 },
       { locality: "Sholinganallur", avgPrice: 12000 },
+      { locality: "Thoraipakkam", avgPrice: 13500 },
       { locality: "Porur", avgPrice: 9000 },
+      { locality: "Tambaram", avgPrice: 7000 },
+      { locality: "OMR", avgPrice: 7900 },
     ],
+
     Coimbatore: [
-      { locality: "RS Puram", avgPrice: 11000 },
-      { locality: "Saibaba Colony", avgPrice: 9500 },
+      { locality: "RS Puram", avgPrice: 5800 },
+      { locality: "Saibaba Colony", avgPrice: 5200 },
+      { locality: "Gandhipuram", avgPrice: 6000 },
+      { locality: "Saravanampatti", avgPrice: 4200 },
+      { locality: "Peelamedu", avgPrice: 4900 },
+      { locality: "Kalapatti", avgPrice: 3800 },
+      { locality: "Kuniamuthur", avgPrice: 3400 },
+      { locality: "Eachanari", avgPrice: 3100 },
     ],
+
     Madurai: [
-      { locality: "KK Nagar", avgPrice: 8000 },
-      { locality: "Anna Nagar", avgPrice: 10500 },
+      { locality: "KK Nagar", avgPrice: 3400 },
+      { locality: "Madurai East", avgPrice: 3100 },
+      { locality: "Simmakkal", avgPrice: 3600 },
+      { locality: "Alagar Kovil Road", avgPrice: 3000 },
+      { locality: "Thiru Nagar", avgPrice: 2800 },
+      { locality: "Goripalayam", avgPrice: 3200 },
+    ],
+
+    Trichy: [
+      { locality: "Thillai Nagar", avgPrice: 3800 },
+      { locality: "Srirangam", avgPrice: 4200 },
+      { locality: "Navalur", avgPrice: 3400 },
+      { locality: "Golden Rock", avgPrice: 3000 },
+      { locality: "Doctors Colony", avgPrice: 4500 },
     ],
   };
 
+  /* ---------------- CURRENT CITY ---------------- */
+
   const currentProperties = properties[location] || [];
 
+  /* ---------------- DYNAMIC PRICE RANGE ---------------- */
+
+  const prices = currentProperties.map((item) => item.avgPrice);
+
+  const minPrice = prices.length ? Math.min(...prices) : 0;
+  const maxPrice = prices.length ? Math.max(...prices) : 0;
+
+  const range = (maxPrice - minPrice) / 3;
+
+  /* ---------------- FILTER LOGIC (ALL CITIES) ---------------- */
+
   const filteredProperties = currentProperties.filter((item) => {
-    if (area === "small") return item.avgPrice < 10000;
+    if (area === "small") return item.avgPrice <= minPrice + range;
+
     if (area === "medium")
-      return item.avgPrice >= 10000 && item.avgPrice <= 15000;
-    if (area === "large") return item.avgPrice > 15000;
+      return (
+        item.avgPrice > minPrice + range &&
+        item.avgPrice <= minPrice + range * 2
+      );
+
+    if (area === "large") return item.avgPrice > minPrice + range * 2;
+
     return true;
   });
 
+  /* ---------------- UI ---------------- */
+
   return (
     <Box sx={{ padding: 4 }}>
-      <section className="city-properties">
-        <div className="city-fst-container">
-          <Typography variant="h4" gutterBottom>
-            Strategic Locations Across Tamil Nadu
+      <Typography variant="h4" gutterBottom>
+        Strategic Locations Across Tamil Nadu
+      </Typography>
+
+      <Typography sx={{ mb: 3 }}>
+        Unlock premium land assets in rapidly developing urban hubs.
+      </Typography>
+
+      {/* FILTERS */}
+      <Box sx={{ display: "flex", gap: 3, mb: 3, flexWrap: "wrap" }}>
+        {/* LOCATION */}
+        <FormControl sx={{ minWidth: 220 }}>
+          <InputLabel>Location</InputLabel>
+          <Select
+            value={location}
+            label="Location"
+            onChange={(e) => {
+              setLocation(e.target.value);
+              setArea("");
+            }}
+          >
+            <MenuItem value="Chennai">Chennai</MenuItem>
+            <MenuItem value="Coimbatore">Coimbatore</MenuItem>
+            <MenuItem value="Madurai">Madurai</MenuItem>
+            <MenuItem value="Trichy">Trichy</MenuItem>
+          </Select>
+        </FormControl>
+
+        {/* PRICE FILTER */}
+        <FormControl sx={{ minWidth: 220 }} disabled={!location}>
+          <InputLabel>Price Type</InputLabel>
+          <Select
+            value={area}
+            label="Price Type"
+            onChange={(e) => setArea(e.target.value)}
+          >
+            <MenuItem value="small">Low Price</MenuItem>
+            <MenuItem value="medium">Medium Price</MenuItem>
+            <MenuItem value="large">High Price</MenuItem>
+          </Select>
+        </FormControl>
+      </Box>
+
+      {/* TABLE */}
+      {location && (
+        <Paper elevation={3} sx={{ padding: 3 }}>
+          <Typography variant="h6" gutterBottom>
+            Property Rates in {location}
           </Typography>
 
-          <p>
-            Unlock premium land assets in rapidly developing urban hubs with
-            long-term value and growth potential.
-          </p>
-        </div>
+          <table width="100%" cellPadding="10">
+            <thead>
+              <tr style={{ background: "#f5f5f5" }}>
+                <th align="left">Locality</th>
+                <th align="left">Avg Price (₹/sq.ft)</th>
+              </tr>
+            </thead>
 
-        {/* 🔽 Select Filters */}
-        <Box
-          sx={{
-            display: "flex",
-            gap: 3,
-            mb: 3,
-            flexWrap: "wrap",
-          }}
-        >
-          {/* Location */}
-          <FormControl sx={{ minWidth: 200 }}>
-            <InputLabel>Location</InputLabel>
-            <Select
-              value={location}
-              label="Location"
-              onChange={(e) => {
-                setLocation(e.target.value);
-                setArea("");
-              }}
-            >
-              <MenuItem value="Chennai">Chennai</MenuItem>
-              <MenuItem value="Coimbatore">Coimbatore</MenuItem>
-              <MenuItem value="Madurai">Madurai</MenuItem>
-            </Select>
-          </FormControl>
-
-          {/* Price */}
-          <FormControl sx={{ minWidth: 200 }} disabled={!location}>
-            <InputLabel>Price Range</InputLabel>
-            <Select
-              value={area}
-              label="Price Range"
-              onChange={(e) => setArea(e.target.value)}
-            >
-              <MenuItem value="small">Below ₹10,000</MenuItem>
-              <MenuItem value="medium">
-                ₹10,000 - ₹15,000
-              </MenuItem>
-              <MenuItem value="large">Above ₹15,000</MenuItem>
-            </Select>
-          </FormControl>
-        </Box>
-
-        {/* Table */}
-        {location && (
-          <Paper elevation={3} sx={{ padding: 3 }}>
-            <Typography variant="h6" gutterBottom>
-              Property Rates in {location}
-            </Typography>
-
-            <table width="100%" cellPadding="10">
-              <thead>
-                <tr style={{ background: "#f5f5f5" }}>
-                  <th align="left">Locality</th>
-                  <th align="left">Avg Price (₹/sq.ft)</th>
+            <tbody>
+              {filteredProperties.map((item, index) => (
+                <tr key={index}>
+                  <td>{item.locality}</td>
+                  <td>₹{item.avgPrice}</td>
                 </tr>
-              </thead>
+              ))}
+            </tbody>
+          </table>
+        </Paper>
+      )}
 
-              <tbody>
-                {filteredProperties.map((item, index) => (
-                  <tr key={index}>
-                    <td>{item.locality}</td>
-                    <td>₹{item.avgPrice}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </Paper>
-        )}
-
+      <Box sx={{ mt: 3 }}>
         <button onClick={() => navigate(-1)}>Back</button>
-      </section>
+      </Box>
     </Box>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import { ChennaiPage } from "./Chennai";
 // import { useNavigate } from "react-router-dom";
@@ -224,7 +410,6 @@ export function CityAreas() {
 //     if (area === "large") return item.avgPrice > 15000;
 //     return true;
 //   });
-
 
 //   return (
 //     <Box sx={{ padding: 4 }}>
@@ -321,8 +506,11 @@ export function CityAreas() {
 //    <BOX/>
 //    );
 // }
-{/* //---------------------------------------------------------------------</Box> */}
-        {/* Property Type Select
+{
+  /* //---------------------------------------------------------------------</Box> */
+}
+{
+  /* Property Type Select
         <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Property Type</InputLabel>
           <Select
@@ -334,10 +522,14 @@ export function CityAreas() {
             <MenuItem value="Commercial Land">Commercial Land</MenuItem>
             <MenuItem value="Farm Land">Farm Land</MenuItem>
           </Select>
-        </FormControl> */}
+        </FormControl> */
+}
 
-        {/* Area Select */}
-        {/* <FormControl sx={{ minWidth: 200 }}>
+{
+  /* Area Select */
+}
+{
+  /* <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Area (sq.ft)</InputLabel>
           <Select
             value={area}
@@ -348,9 +540,11 @@ export function CityAreas() {
             <MenuItem value="1000-2000">1000 - 2000 sq.ft</MenuItem>
             <MenuItem value="2000+">Above 2000 sq.ft</MenuItem>
           </Select>
-        </FormControl> */}
+        </FormControl> */
+}
 
-        {/* <FormControl sx={{ minWidth: 200 }}>
+{
+  /* <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Area (sq.ft)</InputLabel>
           <Select
             value={area}
@@ -362,10 +556,14 @@ export function CityAreas() {
             <MenuItem value="large">Above 15000</MenuItem>
           </Select>
         </FormControl>
-        <ChennaiPage /> */}
+        <ChennaiPage /> */
+}
 
-        {/* Price */}
-        {/* <FormControl sx={{ minWidth: 200 }}>
+{
+  /* Price */
+}
+{
+  /* <FormControl sx={{ minWidth: 200 }}>
           <InputLabel>Price Range</InputLabel>
           <Select
             value={price}
@@ -377,15 +575,17 @@ export function CityAreas() {
             <MenuItem value="1crto2cr">₹1 Crore - ₹2 Crore</MenuItem>
             <MenuItem value="above2cr">Above ₹2 Crore</MenuItem>
           </Select>
-        </FormControl> */}
-    
+        </FormControl> */
+}
 
-      {/* City Buttons */}
-      {/* <div className="city-snd-container">
+{
+  /* City Buttons */
+}
+{
+  /* <div className="city-snd-container">
         <button>Chennai</button>
         <button>Coimbatore</button>
         <button>Madurai</button>
         <button>Trichy</button>
-      </div> */}
-     
-    
+      </div> */
+}
