@@ -24,13 +24,14 @@ import { Kodaikanal } from "./Kodaikanal";
 import { Yercaud } from "./Yercaud";
 import { Coonoor } from "./Coonoor";
 import { CityPlots } from "./CityPlots";
+import { CardType } from "./CardType";
 
 export default function App() {
   return (
     <>
       <div>
         <section className="first-container-box1">
-          <img src="./src/photos/companylogo.png" alt="" />
+          <img src="public\logoray.svg" alt="" />
           <h1 className="fstline">Rayora Land Developers</h1>
 
           <div className="tags">
@@ -71,6 +72,7 @@ export default function App() {
         <Route path="/yercaud" element={<Yercaud />} />
         <Route path="/coonoor" element={<Coonoor />} />
       </Routes>
+      <CardType />
     </>
   );
 }
