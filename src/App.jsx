@@ -24,14 +24,16 @@ import { Kodaikanal } from "./Kodaikanal";
 import { Yercaud } from "./Yercaud";
 import { Coonoor } from "./Coonoor";
 import { CityPlots } from "./CityPlots";
-import { CardType } from "./CardType";
+
+import { Login } from "./Login";
 
 export default function App() {
   return (
     <>
+      {/* <CityPlots /> */}
       <div>
         <section className="first-container-box1">
-          <img src="public\logoray.svg" alt="" />
+          <img src="public\logoray.svg" alt="logo" />
           <h1 className="fstline">Rayora Land Developers</h1>
 
           <div className="tags">
@@ -42,12 +44,14 @@ export default function App() {
               <Link to="/properties">Properties</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
+              <Link to="/login">Login</Link>
             </nav>
           </div>
         </section>
       </div>
 
       <Routes>
+        <Route path="/login" element={<Login />} />
         <Route path="/header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/" element={<Home />} />
@@ -56,7 +60,8 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/cityAreas" element={<CityAreas />} />
         <Route path="/chennaiPage" element={<ChennaiPage />} />
-        <Route path="/cityplots/:area" element={<CityPlots />} />
+        {/* <Route path="/cityplots/:area" element={<CityPlots />} /> */}
+        <Route path="/cityplots/:city/:price" element={<CityPlots />} />
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />
         <Route path="/maduraiPage" element={<MaduraiPage />} />
         <Route path="trichyPage" element={<TrichyPage />} />
@@ -72,7 +77,6 @@ export default function App() {
         <Route path="/yercaud" element={<Yercaud />} />
         <Route path="/coonoor" element={<Coonoor />} />
       </Routes>
-      <CardType />
     </>
   );
 }

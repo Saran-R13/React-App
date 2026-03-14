@@ -71,18 +71,18 @@ import { useEffect, useState } from "react";
 import { CardType } from "./CardType";
 
 export function CityPlots() {
-  const [data, setData] = useState([]);
+  const [card, setCard] = useState([]);
 
   useEffect(() => {
     fetch("https://6971d21632c6bacb12c49d51.mockapi.io/Housing")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => setCard(data));
   }, []);
 
   return (
     <section className="property-grid">
-      {data.map((item) => (
-        <CardType key={item.id} property={item} />
+      {card.map((item) => (
+        <CardType key={item.id} {...item} />
       ))}
     </section>
   );
