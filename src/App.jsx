@@ -61,7 +61,12 @@ export default function App() {
         <Route path="/cityAreas" element={<CityAreas />} />
         <Route path="/chennaiPage" element={<ChennaiPage />} />
         {/* <Route path="/cityplots/:area" element={<CityPlots />} /> */}
-        <Route path="/cityplots/:city/:price" element={<CityPlots />} />
+        {/* <Route path="/cityplots/:city/:price" element={<CityPlots />} /> */}
+        {/* <Route path="/cityplots/:city/:price" element={<CityPlots />} /> */}
+        {/* <Route path="/cityplots/:city/:price" element={<CityPlots />} /> */}
+        {/* <Route path="/cityplots/:type/:city/:price" element={<CityPlots />} /> */}
+        <Route path="/cityplots/:type/:city/:price" element={<CityPlots />} />
+
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />
         <Route path="/maduraiPage" element={<MaduraiPage />} />
         <Route path="trichyPage" element={<TrichyPage />} />
