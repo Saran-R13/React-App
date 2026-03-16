@@ -1,14 +1,10 @@
 import { FaCity, FaHouseUser, FaMountain } from "react-icons/fa";
 import Header from "./Header";
 import { Footer } from "./Footer";
-// import { CityAreas } from "./App";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-// import { HillStations } from "./HillStations";
-// import { Villages } from "./Villages";
 
 export function Properties() {
-  // const [showCity, setShowCity] = useState(false);
   const [showVillages, setshowVillages] = useState(false);
   const [showHillStations, setshowHillStatios] = useState(false);
   return (

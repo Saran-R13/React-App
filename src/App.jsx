@@ -24,7 +24,9 @@ import { Kodaikanal } from "./Kodaikanal";
 import { Yercaud } from "./Yercaud";
 import { Coonoor } from "./Coonoor";
 import { CityPlots } from "./CityPlots";
-
+import { PropertyPage } from "./PropertyPage";
+import PropertyDetails from "./PropertyDetails";
+import { PropertyList } from "./PropertyList";
 import { Login } from "./Login";
 
 export default function App() {
@@ -66,6 +68,9 @@ export default function App() {
         {/* <Route path="/cityplots/:city/:price" element={<CityPlots />} /> */}
         {/* <Route path="/cityplots/:type/:city/:price" element={<CityPlots />} /> */}
         <Route path="/cityplots/:type/:city/:price" element={<CityPlots />} />
+        <Route path="/properties" element={<PropertyPage />} />
+        <Route path="/property/:id" element={<PropertyDetails />} />
+        <Route path="/properties" element={<PropertyList />} />
 
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />
         <Route path="/maduraiPage" element={<MaduraiPage />} />

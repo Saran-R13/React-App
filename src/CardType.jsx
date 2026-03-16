@@ -1,67 +1,44 @@
-// import { CityPlots } from "./CityPlots";
+// import { useNavigate } from "react-router-dom";
 
 // export function CardType({
-//   pic,
-//   header,
-//   district,
-//   title,
-//   verified,
-//   cityplots,
+//   id,
+//   image,
+//   locality,
+//   city,
+//   avgPriceSqft,
+//   plotSizeSqft,
+//   propertyType,
+//   description,
 // }) {
-//   return (
-//     <section className="card">
-//       <img src={pic} alt="" width="200" />
-//       <h3>{header}</h3>
-//       <p>{district}</p>
-//       <p>{title}</p>
-//       <p>{verified ? "✅ Verified" : "❌ Not Verified"}</p>
-//       {cityplots.map((item, index) => (
-//         <div key={index}>
-//           <p>
-//             {item.typeOne} - {item.amountOne}
-//           </p>
-//           <p>
-//             {item.typeTwo} - {item.amountTwo}
-//           </p>
-//         </div>
-//       ))}
-//     </section>
-//   );
-// }
+//   const navigate = useNavigate();
+//   const handleDetails = () => navigate(`/property/${id}`);
 
-// export function CardType({ property }) {
 //   return (
 //     <section className="property-card">
-//       {/* IMAGE */}
 //       <div className="property-img">
-//         <img src={property.image} alt={property.locality} />
+//         <img src={image} alt={locality} />
 //       </div>
-
-//       {/* CONTENT */}
 //       <div className="property-content">
-//         <h3>{property.city}</h3>
-
-//         <p className="location">{property.locality}</p>
-
-//         <p className="type">{property.propertyType}</p>
-
+//         <h3>{city}</h3>
+//         <p className="location">{locality}</p>
+//         <p className="type">{propertyType}</p>
 //         <p className="price">
-//           ₹{property.avgPriceSqft} <span>/ sq.ft</span>
+//           <span className="rupee">₹</span>
+//           {avgPriceSqft} / Sqft
 //         </p>
-
-//         <p className="size">Plot Size: {property.plotSizeSqft} sq.ft</p>
-
-//         <p className="desc">{property.description}</p>
-
-//         <span className="verified">
-//           {property.verified ? "✅ Verified Property" : "❌ Not Verified"}
-//         </span>
+//         <p className="size">{plotSizeSqft}</p>
+//         <p className="desc">{description}</p>
+//         <button className="details-btn" onClick={handleDetails}>
+//           Details
+//         </button>
 //       </div>
 //     </section>
 //   );
 // }
+import { useNavigate } from "react-router-dom";
 
 export function CardType({
+  id,
   image,
   locality,
   city,
@@ -69,16 +46,19 @@ export function CardType({
   plotSizeSqft,
   propertyType,
   description,
-  // verified,
 }) {
+  const navigate = useNavigate();
+
+  const handleDetails = () => {
+    navigate(`/property/${id}`);
+  };
+
   return (
     <section className="property-card">
-      {/* IMAGE */}
       <div className="property-img">
         <img src={image} alt={locality} />
       </div>
 
-      {/* CONTENT */}
       <div className="property-content">
         <h3>{city}</h3>
 
@@ -86,17 +66,15 @@ export function CardType({
 
         <p className="type">{propertyType}</p>
 
-        <p className="price">
-          {avgPriceSqft} <span></span>
-        </p>
+        <p className="price">₹{avgPriceSqft} / Sqft</p>
 
-        <p className="size">{plotSizeSqft} </p>
+        <p className="size">Plot Size: {plotSizeSqft}</p>
 
         <p className="desc">{description}</p>
 
-        {/* <span className="verified">
-          {verified ? "✅ Verified Property" : "❌ Not Verified"}
-        </span> */}
+        <button className="details-btn" onClick={handleDetails}>
+          Details
+        </button>
       </div>
     </section>
   );
