@@ -28,6 +28,9 @@ import { PropertyPage } from "./PropertyPage";
 import PropertyDetails from "./PropertyDetails";
 import { PropertyList } from "./PropertyList";
 import { Login } from "./Login";
+import { MyOrders } from "./MyOrders";
+import { AddProperty } from "./AddProperty";
+import { EditProperty } from "./EditProperty";
 
 export default function App() {
   return (
@@ -36,7 +39,7 @@ export default function App() {
       <div>
         <section className="first-container-box1">
           <img src="public\logoray.svg" alt="logo" />
-          <h1 className="fstline">Rayora Land Developers</h1>
+          {/* <h1 className="fstline">Rayora Land Developers</h1> */}
 
           <div className="tags">
             <nav>
@@ -47,6 +50,8 @@ export default function App() {
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
               <Link to="/login">Login</Link>
+              <Link to="orders"> My Orders</Link>
+              <Link to="/add-property">Add Property</Link>
             </nav>
           </div>
         </section>
@@ -71,7 +76,10 @@ export default function App() {
         <Route path="/properties" element={<PropertyPage />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/properties" element={<PropertyList />} />
-
+        <Route path="/orders" element={<MyOrders />} />
+        <Route path="/add-property" element={<AddProperty />} />
+        <Route path="/edit-property/:id" element={<EditProperty />} />
+        ;
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />
         <Route path="/maduraiPage" element={<MaduraiPage />} />
         <Route path="trichyPage" element={<TrichyPage />} />

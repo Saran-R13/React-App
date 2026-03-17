@@ -121,10 +121,12 @@
 
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { BookingForm } from "./BookingForm";
 
 function PropertyDetails() {
   const { id } = useParams();
   const [property, setProperty] = useState(null);
+  const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     fetch(`https://6971d21632c6bacb12c49d51.mockapi.io/Housing/${id}`)
@@ -133,6 +135,13 @@ function PropertyDetails() {
   }, [id]);
 
   if (!property) return <p>Loading...</p>;
+  const newOrder = {
+    ...form,
+    propertyName: property.city + " - " + property.locality,
+    price: property.avgPriceSqft,
+    id: Date.now(),
+    date: new Date().toLocaleString(),
+  };
 
   return (
     <div className="details-container">
@@ -162,9 +171,17 @@ function PropertyDetails() {
 
           <p>{property.description}</p>
 
-          <button className="order-btn">Order</button>
+          <button className="order-btn" onClick={() => setShowBooking(true)}>
+            Booking
+          </button>
         </div>
       </div>
+      {showBooking && (
+        <BookingForm
+          property={property}
+          onClose={() => setShowBooking(false)}
+        />
+      )}
     </div>
   );
 }
