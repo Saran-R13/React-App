@@ -161,8 +161,7 @@ export function Ariyalur() {
         </Select>
       </FormControl>
 
-      {/* Table */}
-      {/* <table border="1" cellPadding="10" style={{ marginTop: "20px" }}> */}
+   
         <thead>
           <tr>
             <th>Locality</th>

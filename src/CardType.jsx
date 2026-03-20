@@ -1,4 +1,6 @@
 // import { useNavigate } from "react-router-dom";
+// import { useContext } from "react";
+// import { PropertyContext } from "./DataProvider";
 
 // export function CardType({
 //   id,
@@ -9,13 +11,22 @@
 //   plotSizeSqft,
 //   propertyType,
 //   description,
-//   onEdit, // 🔥 parent la pass pannuva handler
-//   onDelete, // 🔥 parent la pass pannuva handler
 // }) {
 //   const navigate = useNavigate();
+//   const { deleteProperty } = useContext(PropertyContext); // 🔥 delete from context
 
 //   const handleDetails = () => {
 //     navigate(`/property/${id}`);
+//   };
+
+//   const handleEdit = () => {
+//     navigate(`/edit-property/${id}`); // 🔥 navigate to edit page
+//   };
+
+//   const handleDelete = () => {
+//     if (window.confirm("Are you sure you want to delete this property?")) {
+//       deleteProperty(id); // 🔥 delete using context
+//     }
 //   };
 
 //   return (
@@ -42,7 +53,7 @@
 
 //           <button
 //             className="edit-btn"
-//             onClick={() => onEdit && onEdit(id)}
+//             onClick={handleEdit}
 //             style={{
 //               backgroundColor: "#FFA500",
 //               color: "#fff",
@@ -56,7 +67,7 @@
 
 //           <button
 //             className="delete-btn"
-//             onClick={() => onDelete && onDelete(id)}
+//             onClick={handleDelete}
 //             style={{
 //               backgroundColor: "#FF4500",
 //               color: "#fff",
@@ -74,7 +85,7 @@
 // }
 
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { PropertyContext } from "./DataProvider";
 
 export function CardType({
@@ -88,19 +99,25 @@ export function CardType({
   description,
 }) {
   const navigate = useNavigate();
-  const { deleteProperty } = useContext(PropertyContext); // 🔥 delete from context
+  const { deleteProperty } = useContext(PropertyContext); 
+  const [role, setRole] = useState(null);
+
+  useEffect(() => {
+    const userRole = localStorage.getItem("role");
+    setRole(userRole);
+  }, []);
 
   const handleDetails = () => {
     navigate(`/property/${id}`);
   };
 
   const handleEdit = () => {
-    navigate(`/edit-property/${id}`); // 🔥 navigate to edit page
+    navigate(`/edit-property/${id}`); 
   };
 
   const handleDelete = () => {
     if (window.confirm("Are you sure you want to delete this property?")) {
-      deleteProperty(id); // 🔥 delete using context
+      deleteProperty(id); 
     }
   };
 
@@ -126,33 +143,37 @@ export function CardType({
             Details
           </button>
 
-          <button
-            className="edit-btn"
-            onClick={handleEdit}
-            style={{
-              backgroundColor: "#FFA500",
-              color: "#fff",
-              padding: "5px 10px",
-              border: "none",
-              borderRadius: "5px",
-            }}
-          >
-            Edit
-          </button>
+          {role === "admin" && (
+            <>
+              <button
+                className="edit-btn"
+                onClick={handleEdit}
+                style={{
+                  backgroundColor: "#FFA500",
+                  color: "#fff",
+                  padding: "5px 10px",
+                  border: "none",
+                  borderRadius: "5px",
+                }}
+              >
+                Edit
+              </button>
 
-          <button
-            className="delete-btn"
-            onClick={handleDelete}
-            style={{
-              backgroundColor: "#FF4500",
-              color: "#fff",
-              padding: "5px 10px",
-              border: "none",
-              borderRadius: "5px",
-            }}
-          >
-            Delete
-          </button>
+              <button
+                className="delete-btn"
+                onClick={handleDelete}
+                style={{
+                  backgroundColor: "#FF4500",
+                  color: "#fff",
+                  padding: "5px 10px",
+                  border: "none",
+                  borderRadius: "5px",
+                }}
+              >
+                Delete
+              </button>
+            </>
+          )}
         </div>
       </div>
     </section>

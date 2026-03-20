@@ -31,7 +31,7 @@ export function CoimbatorePage() {
     <>
       <h2>Property Rates in Coimbatore</h2>
 
-      {/* Filter Dropdown */}
+     
       <FormControl sx={{ minWidth: 200 }}>
         <InputLabel>Area (sq.ft)</InputLabel>
         <Select
@@ -61,7 +61,7 @@ export function CoimbatorePage() {
           </tr>
         ))}
       </tbody>
-      {/* </table> */}
+   
 
       <br />
       <button onClick={() => navigate(-1)}>Back</button>

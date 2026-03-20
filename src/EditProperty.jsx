@@ -1,14 +1,13 @@
+// import { useState, useContext, useEffect } from "react";
 // import { useParams, useNavigate } from "react-router-dom";
-// import { useState, useEffect, useContext } from "react";
 // import { PropertyContext } from "./DataProvider";
 // import { TextField, Button } from "@mui/material";
 
 // export function EditProperty() {
 //   const { id } = useParams();
 //   const navigate = useNavigate();
-//   const { allProperties, addProperty } = useContext(PropertyContext);
+//   const { allProperties, updateProperty } = useContext(PropertyContext);
 
-//   // 🔹 Find the property from context
 //   const property = allProperties.find((p) => p.id.toString() === id);
 
 //   const [type, setType] = useState("");
@@ -20,7 +19,6 @@
 //   const [description, setDescription] = useState("");
 //   const [image, setImage] = useState("");
 
-//   // 🔹 Pre-fill form
 //   useEffect(() => {
 //     if (property) {
 //       setType(property.type);
@@ -34,12 +32,8 @@
 //     }
 //   }, [property]);
 
-//   // 🔹 Update property using context
-//   const updateProperty = () => {
-//     if (!property) return;
-
-//     const updatedProperty = {
-//       ...property,
+//   const handleUpdate = async () => {
+//     await updateProperty(id, {
 //       type,
 //       city,
 //       locality,
@@ -48,20 +42,9 @@
 //       propertyType,
 //       description,
 //       image,
-//     };
-
-//     // We can use your existing addProperty with PUT-like update logic in context
-//     // If your context has an 'updateProperty' function, use that. If not, you can
-//     // implement it in DataProvider: update in mockapi and refresh context.
-//     // Example:
-//     fetch(`https://6971d21632c6bacb12c49d51.mockapi.io/Housing/${id}`, {
-//       method: "PUT",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(updatedProperty),
-//     }).then(() => {
-//       alert("Property Updated!");
-//       navigate(-1); // Go back to previous page
 //     });
+//     alert("🔥 Property Updated!");
+//     navigate(-1); // back to previous page
 //   };
 
 //   if (!property) return <p>Property not found!</p>;
@@ -115,7 +98,7 @@
 //         value={image}
 //         onChange={(e) => setImage(e.target.value)}
 //       />
-//       <Button variant="contained" color="primary" onClick={updateProperty}>
+//       <Button variant="contained" color="primary" onClick={handleUpdate}>
 //         Update Property
 //       </Button>
 //     </div>
@@ -131,6 +114,7 @@ export function EditProperty() {
   const { id } = useParams();
   const navigate = useNavigate();
   const { allProperties, updateProperty } = useContext(PropertyContext);
+  const [role, setRole] = useState(null);
 
   const property = allProperties.find((p) => p.id.toString() === id);
 
@@ -142,6 +126,16 @@ export function EditProperty() {
   const [propertyType, setPropertyType] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");
+
+  useEffect(() => {
+    const userRole = localStorage.getItem("role");
+    setRole(userRole);
+
+    if (userRole !== "admin") {
+      alert("❌ Access Denied! Only admin can edit properties.");
+      navigate("/home");
+    }
+  }, [navigate]);
 
   useEffect(() => {
     if (property) {
@@ -168,10 +162,13 @@ export function EditProperty() {
       image,
     });
     alert("🔥 Property Updated!");
-    navigate(-1); // back to previous page
+    navigate(-1); 
   };
 
   if (!property) return <p>Property not found!</p>;
+
+  
+  if (role !== "admin") return null;
 
   return (
     <div
@@ -180,6 +177,8 @@ export function EditProperty() {
         flexDirection: "column",
         gap: "15px",
         width: "300px",
+        margin: "auto",
+        marginTop: "50px",
       }}
     >
       <TextField

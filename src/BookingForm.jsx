@@ -101,10 +101,10 @@ export function BookingForm({ onClose, property }) {
     const existingOrders = JSON.parse(localStorage.getItem("orders")) || [];
 
     const newOrder = {
-      ...form, // 👈 form must exist
+      ...form,
       propertyName: property?.city + " - " + property?.locality,
       price: property?.avgPriceSqft,
-      id: Date.now(), // 👈 correct usage
+      id: Date.now(), 
       date: new Date().toLocaleString(),
     };
 

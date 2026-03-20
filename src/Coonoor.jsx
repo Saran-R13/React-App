@@ -127,7 +127,7 @@ export function Coonoor() {
     <>
       <h2>Property Rates in Coonoor</h2>
 
-      {/* Filter Dropdown */}
+   
       <FormControl sx={{ minWidth: 200 }}>
         <InputLabel>Price Range</InputLabel>
         <Select
@@ -141,8 +141,6 @@ export function Coonoor() {
         </Select>
       </FormControl>
 
-      {/* Table */}
-      {/* <table border="1" cellPadding="10" style={{ marginTop: "20px" }}> */}
         <thead>
           <tr>
             <th>Locality</th>

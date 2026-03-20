@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { CardType } from "./CardType";
 
 export function CityPlots() {
-  const { type, city } = useParams(); // city comes first time
+  const { type, city } = useParams();
   // const navigate = useNavigate();
 
   // const [selectedCity, setSelectedCity] = useState(city);
@@ -13,7 +13,7 @@ export function CityPlots() {
   const [card, setCard] = useState([]);
 
   const changePrice = (price) => {
-    setSelectedPrice(price); // only change price
+    setSelectedPrice(price); 
   };
 
   useEffect(() => {
@@ -55,7 +55,7 @@ export function CityPlots() {
 
   return (
     <section>
-      {/* PRICE FILTER */}
+    
       <div className="price-filter">
         <button onClick={() => changePrice("small")}>Low</button>
 
@@ -64,7 +64,7 @@ export function CityPlots() {
         <button onClick={() => changePrice("large")}>High</button>
       </div>
 
-      {/* PROPERTY GRID */}
+   
       <section className="property-grid">
         {card.length > 0 ? (
           card.map((item) => <CardType key={item.id} {...item} />)

@@ -31,11 +31,11 @@ import { Login } from "./Login";
 import { MyOrders } from "./MyOrders";
 import { AddProperty } from "./AddProperty";
 import { EditProperty } from "./EditProperty";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export default function App() {
   return (
     <>
-      {/* <CityPlots /> */}
       <div>
         <section className="first-container-box1">
           <img src="public\logoray.svg" alt="logo" />
@@ -43,15 +43,16 @@ export default function App() {
 
           <div className="tags">
             <nav>
-              {/* <Link to="/header"></Link> */}
-              {/* <Link to="/footer"></Link> */}
               <Link to="/">Home</Link>
               <Link to="/properties">Properties</Link>
               <Link to="/about">About</Link>
               <Link to="/contact">Contact</Link>
-              <Link to="/login">Login</Link>
+
               <Link to="orders"> My Orders</Link>
               <Link to="/add-property">Add Property</Link>
+              <Link to="/login" className="login-btn">
+                Login
+              </Link>
             </nav>
           </div>
         </section>
@@ -59,12 +60,41 @@ export default function App() {
 
       <Routes>
         <Route path="/login" element={<Login />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoute>
+              <Home />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/header" element={<Header />} />
         <Route path="/Footer" element={<Footer />} />
         <Route path="/" element={<Home />} />
-        <Route path="/properties" element={<Properties />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          path="/properties"
+          element={
+            <ProtectedRoute>
+              <Properties />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <ProtectedRoute>
+              <About />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ProtectedRoute>
+              <Contact />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/cityAreas" element={<CityAreas />} />
         <Route path="/chennaiPage" element={<ChennaiPage />} />
         {/* <Route path="/cityplots/:area" element={<CityPlots />} /> */}
@@ -76,8 +106,22 @@ export default function App() {
         <Route path="/properties" element={<PropertyPage />} />
         <Route path="/property/:id" element={<PropertyDetails />} />
         <Route path="/properties" element={<PropertyList />} />
-        <Route path="/orders" element={<MyOrders />} />
-        <Route path="/add-property" element={<AddProperty />} />
+        <Route
+          path="/orders"
+          element={
+            <ProtectedRoute>
+              <MyOrders />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/add-property"
+          element={
+            <ProtectedRoute>
+              <AddProperty />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/edit-property/:id" element={<EditProperty />} />
         ;
         <Route path="/coimbatorePage" element={<CoimbatorePage />} />

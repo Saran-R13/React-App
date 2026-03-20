@@ -10,6 +10,10 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-around;
+    background-color: #ffeccc; /* your header bg */
+  padding: 10px 20px; /* remove extra top/bottom padding if needed */
+  margin: 0; /* remove default margin */
+  height: auto;
 }
 .first-container-box1 img{
     padding-left: 5rem;
@@ -34,7 +38,7 @@ body{
     padding-left: 9rem;
     font-size: 1.5rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 2rem;
     nav{
         display: flex;
@@ -42,11 +46,14 @@ body{
     }
     
 }
+.login-btn {
+  margin-left: 20rem; /* increase panna gap perusa aagum */
+}
 a{
      text-decoration: none;
 }
 /* --------------------------------------------HOME-------------------------------------------- */
-.flat-container{
+/* .flat-container{
     margin: 0;
     border: 0;
     background:url("https://www.livehome3d.com/assets/img/articles/rooms-in-house/luxurious-living-room@2x.jpg");
@@ -73,92 +80,218 @@ background: url("https://agvalueconsulting.com/wp-content/uploads/2024/04/Farm-P
     font-weight: 0.9rem;
      letter-spacing: 0.3rem;
     padding-top: rem;
+} */
+ /* HERO FULL SCREEN */
+
+ /* HERO */
+.hero {
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+  background:url("https://www.livehome3d.com/assets/img/articles/rooms-in-house/luxurious-living-room@2x.jpg");
+}
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  height: 100%;
+}
+
+/* SLIDES */
+.slides {
+  display: flex;
+  width: 600%; /* 🔥 important */
+  height: 100%;
+  animation: slide 36s linear infinite; /* 🔥 slow + smooth */
+}
+
+/* EACH IMAGE */
+.slide {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* IMAGES */
+.slide1 {
+  background-image: url("https://images.unsplash.com/photo-1560185127-6ed189bf02f4");
+}
+
+.slide2 {
+  background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+}
+
+.slide3 {
+  background-image: url("https://images.unsplash.com/photo-1572120360610-d971b9d7767c");
+}
+
+/* 🔥 MAIN FIX: NO BLANK, NO JUMP */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-300%);
+  }
+}
+
+/* TEXT CENTER */
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* BUTTON */
+.clickhere {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #ff5a5f;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.clickhere:hover {
+  transform: scale(1.1);
 }
 /* ------------------------------------------FOOTER------------------------------------------------ */
 .footer-container{
     background-color: bisque;
-    display: flex;justify-content: space-evenly;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .foot-box1,.foot-box2,.foot-box3,.foot-box4{
-    /* color: white; */
-    /* background-color: black; */
     width: 20rem;
-    /* display: flex; */
 }
+
 .foot-box1 img{
-width: 100px;
-height: 100px;
-padding-bottom: -2rem;
-margin: 0;
+    width: 100px;
+    height: 100px;
+    margin: 0;
 }
+
 .foot-box1 p{
-    padding-top: 0rem;
     line-height: 1.2rem;
     font-family: sans-serif;
     margin: 0;
 }
- .span{
+
+.span{
     font-weight: 700;
     font-family: serif;
- }
+}
 
 .foot-box2 h3{
     padding-left: 1.6rem; 
 }
-}
+
 /* -------------------------------------PROPERTIES------------------------------------------------------ */
+
 .overall-porperty{
     text-align: center;
 }
+
 .properties{
     padding-top: 2rem;
     display: flex;
-    flex-direction: row;
-       justify-content: space-evenly;
-       
-  
-   
-    .properties-fst-container,.properties-snd-container,.properties-trd-container{
-        padding: 1rem;
-    background-color: aquamarine;
-    box-shadow: 5px 5px 5px  rgb(186, 226, 186);
-     /* border: 2px black solid; */
-     border-radius: 1rem;
-     >h3{
-        letter-spacing: 0.2rem;
-     }
-       height: 20rem;
-    width: 25rem;
-    >button{
-            color:rgb(60, 47, 232);
-            width: 13.9rem;
-            border: 0;
-            border-radius: 1.5rem;
-            height: 2rem;
-            background-color:lightblue;
-    }
-     button:hover{
-            background: rgb(71, 96, 105);
-            color: white;
-        }
+    justify-content: space-evenly;
 }
- .properties-fst-container:hover{
-    transform: scale(1.1)translateY(-10px);
 
- }
-.properties-snd-container:hover{
-    transform: scale(1.1)translateY(-10px);
-  
+/* 🔥 COMMON CARD STYLE */
+.properties-fst-container,
+.properties-snd-container,
+.properties-trd-container{
+    padding: 1rem;
+    height: 20rem;
+    width: 25rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    box-shadow: 5px 5px 5px rgb(186, 226, 186);
 }
+
+/* 🔥 BACKGROUND IMAGES */
+.properties-fst-container{
+    background: url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab") center/cover no-repeat;
+}
+
+.properties-snd-container{
+    background: url("https://images.unsplash.com/photo-1500382017468-9049fed747ef") center/cover no-repeat;
+}
+
+.properties-trd-container{
+    background: url("https://images.unsplash.com/photo-1501785888041-af3ef285b470") center/cover no-repeat;
+}
+
+/* 🔥 DARK OVERLAY */
+.properties-fst-container::before,
+.properties-snd-container::before,
+.properties-trd-container::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* 🔥 TEXT ABOVE IMAGE */
+.properties-fst-container *,
+.properties-snd-container *,
+.properties-trd-container *{
+    position: relative;
+    z-index: 2;
+}
+
+/* TITLE */
+.properties h3{
+    letter-spacing: 0.2rem;
+}
+
+/* BUTTON */
+.properties button{
+    color: rgb(60, 47, 232);
+    width: 13.9rem;
+    border: 0;
+    border-radius: 1.5rem;
+    height: 2rem;
+    background-color: lightblue;
+}
+
+.properties button:hover{
+    background: rgb(71, 96, 105);
+    color: white;
+}
+
+/* HOVER EFFECT */
+.properties-fst-container:hover,
+.properties-snd-container:hover,
 .properties-trd-container:hover{
-    transform: scale(1.1)translateY(-10px);
-    
+    transform: scale(1.05) translateY(-10px);
+    transition: 0.3s;
 }
-} 
-.city-properties{
-    .city-fst-container{
-        text-align: center;
-    }
+
+/* CITY EXTRA */
+.city-properties .city-fst-container{
+    text-align: center;
 }
 .chennai-propertie-table,.coimbatore-propertie-table,.madurai-propertie-table,.trichy-propertie-table {
   padding: 40px;
@@ -925,3 +1058,4 @@ padding:10px;
   border-radius:6px;
   cursor:pointer;
 }
+/* .........................................................home css using chatgpt */

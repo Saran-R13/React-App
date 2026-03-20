@@ -1,36 +1,39 @@
 // import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-// import { Link } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 // import Header from "./Header";
 // import { Footer } from "./Footer";
-// // import { CardType } from "./CardType";
-
+// import { HeroSlider } from "./HeroSlider";
 // export function Home() {
+//   const navigate = useNavigate();
+
 //   return (
 //     <>
 //       <Header />
+
 //       <section>
 //         <p className="flat-container">
 //           Live Where Your Heart Belongs Modern Homes & Premium Flats
 //           <br />
-//           <button>Click Here...</button>
+//           <button className="clickhere" onClick={() => navigate("/properties")}>
+//             Click Here...
+//           </button>
 //         </p>
 //       </section>
-//       <section>
+
+//       {/* * <section>
 //         <p className="land-container">
 //           Buy Land. Build Tomorrow. Smart Investment Starts Here
 //           <br />
-//           <button>Click Here...</button>
+//           <button onClick={() => navigate("/properties")}>Click Here...</button>
 //         </p>
-//       </section>
+//       </section>  */}
 
 //       <Footer />
 //     </>
 //   );
 // }
-
-import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-import Header from "./Header";
+import  Header  from "./Header";
 import { Footer } from "./Footer";
 
 export function Home() {
@@ -40,20 +43,25 @@ export function Home() {
     <>
       <Header />
 
-      <section>
-        <p className="flat-container">
-          Live Where Your Heart Belongs Modern Homes & Premium Flats
-          <br />
-          <button onClick={() => navigate("/properties")}>Click Here...</button>
-        </p>
-      </section>
+      <section className="hero">
+        <div className="slider">
+          <div className="slides">
+            <div className="slide slide1"></div>
+            <div className="slide slide2"></div>
+            <div className="slide slide3"></div>
+          </div>
 
-      <section>
-        <p className="land-container">
-          Buy Land. Build Tomorrow. Smart Investment Starts Here
-          <br />
-          <button onClick={() => navigate("/properties")}>Click Here...</button>
-        </p>
+          <div className="content">
+            Live Where Your Heart Belongs Modern Homes & Premium Flats
+            <br />
+            <button
+              className="clickhere"
+              onClick={() => navigate("/properties")}
+            >
+              Click Here...
+            </button>
+          </div>
+        </div>
       </section>
 
       <Footer />

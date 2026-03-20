@@ -1,11 +1,11 @@
 import { Footer } from "./Footer";
-import Header from "./Header";
+import  Header from "./Header";
 // import { Footer } from "./Footer";
 
 export function Contact() {
   return (
     <>
-      {/* <Headers /> */}
+   
       <section class="contact-container">
         <h1>Contact Rayora</h1>
 
@@ -17,7 +17,7 @@ export function Contact() {
           <button type="submit">Send Message</button>
         </form>
       </section>
-      {/* <Footer /> */}
+     
     </>
   );
 }
